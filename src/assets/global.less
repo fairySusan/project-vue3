@@ -1,0 +1,579 @@
+@darkFontColor: rgba(0, 0, 0, 0.65);
+
+@deepDarkFontColor: rgba(0, 0, 0, 0.85);
+
+@lightDarkFontColor: rgba(0, 0, 0, 0.45);
+
+@midFontColor: #666;
+@lightFontColor: #999;
+@disabledColor: fade(#000, 25%);
+
+@primary-color: #f04e8c;
+@primary-light: #f37fac;
+
+@error-color: #cc1d1d;
+
+@success-color: #08af1e;
+
+@font-size-min: 10px;
+@font-size: 14px;
+@font-size-m: 16px;
+@font-size-l: 20px;
+@font-size-ll: 24px;
+@font-size-lll: 28px;
+
+@bodyColor: #f0f2f5; // body背景色
+
+@borderColor: #e8e8e8; // 边线颜色
+
+@borderRadius: 5px; // 公用圆角大小
+
+
+@manColor: #2587F9; // 男性的颜色
+@womanColor: #F1892F; // 女性的颜色
+@moneyColor: #ff7d13;
+@marginL: 20px;
+@paddingL: 20px;
+
+@margin: 10px;
+@padding: 10px;
+
+@border-color: #e1e1e1;
+@border-size: 1px;
+
+.bgWhitePage {
+	background-color: white;
+	padding: @paddingL;
+}
+
+// 公共圆角
+.borderRadius {
+	border-radius: @borderRadius;
+}
+
+.circle {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.clr {
+	&:after {
+		clear: both;
+		overflow: hidden;
+		content: "";
+		display: table;
+	}
+}
+
+/*---------------flex--------------*/
+// 横向布局
+.flexRow {
+	display: flex;
+}
+
+// 横向布局 wrap
+.flexRowWrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+// 横向布局，不换行
+.flexRowNoWrap {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+// 横向布局  space-between;
+.flexRowSpaceBetween {
+	display: flex;
+	justify-content: space-between;
+}
+
+// 横向布局 space-around
+.flexRowSpaceAround {
+	display: flex;
+	justify-content: space-around;
+}
+
+// 横向-水平居中 center
+.flexRowCenter {
+	display: flex;
+	justify-content: center;
+}
+
+// 横向布局 align-items: center;
+.flexRowAlignItemCenter {
+	display: flex;
+	align-items: center;
+}
+
+// 横向布局 space-between;  align-items: center;
+.flexRowBetweenCenter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// 横向布局  space-between;  align-items: flex-start;
+.flexRowBetweenStart {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+// 横向布局 space-around;  align-items: center;
+.flexRowAroundCenter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+// 纵向布局
+.flexColumn {
+	display: flex;
+	flex-direction: column;
+}
+
+// 纵向布局 space-between
+.flexColumnSpaceBetween {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+// 纵向布局  space-around
+.flexColumnSpaceAround {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+// 纵向布局 align-items：center
+.flexColumnAlignItemCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+// 纵向布局 align-items：flex-start
+.flexColumnAlignItemStart {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+// 纵向布局 align-items：flex-end
+.flexColumnAlignItemEnd {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+
+// 纵向布局 space-between align-items：center
+.flexColumnBetweenCenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// 纵向布局 space-around align-items：center
+.flexColumnBetweenCenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.flexNone {
+	flex: none;
+}
+
+/*--------------position-----------*/
+.relative {
+	position: relative;
+}
+
+.positionAbsolute {
+	position: absolute;
+}
+.positionFixed {
+	position: fixed;
+}
+/*-------------margin----------*/
+.margin {
+	margin: @margin;
+}
+
+.marginLeft {
+	margin-left: @margin;
+}
+
+.marginRight {
+	margin-right: @margin;
+}
+
+.marginTop {
+	margin-top: @margin;
+}
+
+.marginBottom {
+	margin-bottom: @margin;
+}
+
+.marginTopLeft {
+	margin: @margin 0 0 @margin;
+}
+
+.marginTopRight {
+	margin: @margin @margin 0 0;
+}
+
+.marginTopBottom {
+	margin: @margin 0 @margin 0;
+}
+
+.marginLeftRight {
+	margin: 0 @margin;
+}
+
+.marginL {
+	margin: @marginL;
+}
+
+.marginLeftL {
+	margin-left: @marginL;
+}
+
+.marginRightL {
+	margin-right: @marginL;
+}
+
+.marginTopL {
+	margin-top: @marginL;
+}
+
+.marginBottomL {
+	margin-bottom: @marginL;
+}
+
+.marginTopLeftL {
+	margin: @marginL 0 0 @marginL;
+}
+
+.marginTopRightL {
+	margin: @marginL @marginL 0 0;
+}
+
+.marginTopBottomL {
+	margin: @marginL 0 @marginL 0;
+}
+
+.marginLeftRightL {
+	margin: 0 @marginL 0 @marginL;
+}
+
+/*----padding----------*/
+.padding {
+	padding: @padding;
+}
+
+.paddingLeft {
+	padding-left: @padding;
+}
+
+.paddingRight {
+	padding-right: @padding;
+}
+
+.paddingTop {
+	padding-top: @padding;
+}
+
+.paddingBottom {
+	padding-bottom: @padding;
+}
+
+.paddingTopLeft {
+	padding: @padding 0 0 @padding;
+}
+
+.paddingTopBottom {
+	padding: @padding 0;
+}
+
+.paddingLeftRight {
+	padding: 0 @padding;
+}
+
+.paddingL {
+	padding: @paddingL;
+}
+
+.paddingLeftL {
+	padding-left: @paddingL;
+}
+
+.paddingRightL {
+	padding-right: @paddingL;
+}
+
+.paddingTopL {
+	padding-top: @paddingL;
+}
+
+.paddingBottomL {
+	padding-bottom: @paddingL;
+}
+
+.paddingTopLeftL {
+	padding: @paddingL 0 0 @paddingL;
+}
+
+.paddingTopBottomL {
+	padding: @paddingL 0;
+}
+
+.paddingLeftRightL {
+	padding: 0 @paddingL;
+}
+
+/*------------fontsize---------*/
+.fontSizeMin {
+	font-size: @font-size-min;
+}
+
+.fontSizeNormal {
+	font-size: @font-size;
+}
+
+.fontSizeM {
+	font-size: @font-size-m;
+
+	@media screen and (max-width: 1720px) {
+		font-size: @font-size;
+	}
+}
+
+.fontSizeL {
+	font-size: @font-size-l;
+}
+
+.fontSizeLL {
+	font-size: @font-size-ll;
+}
+
+.fontSizeLLL {
+	font-size: @font-size-lll;
+}
+
+/*----------fontcolor-----------------*/
+// 主题色
+.primaryFontColor {
+	color: @primary-color;
+}
+
+// 浅一点的主题色
+.primaryFontColorLight {
+	color: @primary-light;
+}
+
+// 主要的黑色字体
+.darkFontColor {
+	color: @darkFontColor
+}
+
+// 深一点的黑色字体
+.deepDarkFontColor {
+	color: @deepDarkFontColor
+}
+// 浅一点的黑色字体 
+.lightDarkFontColor {
+	color: @lightDarkFontColor
+}
+// 白色字体
+.whiteFontColor {
+	color: white;
+}
+
+// 红色字体
+.redFontColor {
+	color: @error-color;
+}
+
+// 黄色字体
+.yellowFontColor {
+	color: #ff7d13;
+}
+
+// 绿色字体
+.greenFontColor {
+	color: @success-color;
+}
+
+// 灰色字体
+.grayFontColor {
+	color: @lightFontColor;
+}
+
+/*----------------字体加粗-----------------------*/
+.fontWeightBold {
+	font-weight: bold;
+}
+
+.fontWeightNormal {
+	font-weight: normal;
+}
+
+/*-----------text-align--------------------*/
+.textAlignCenter {
+	text-align: center;
+}
+
+.textAlignLeft {
+	text-align: left;
+}
+
+.textAlignRight {
+	text-align: right;
+}
+
+/*--------------text-indent----------------------*/
+.textIndent {
+	text-indent: 2em;
+}
+
+/*--------------border----------------------*/
+.border {
+	border: 1px solid @borderColor;
+}
+
+.borderBottom {
+	border-bottom: 1px solid @borderColor;
+}
+
+.borderTop {
+	border-top: 1px solid @borderColor;
+}
+
+.borderRight {
+	border-right: 1px solid @borderColor;
+}
+
+.borderLeft {
+	border-left: 1px solid @borderColor;
+}
+
+/*------------背景颜色---------------------*/
+.whiteBackground {
+	background-color: white;
+}
+
+.grayBackground {
+	background-color: @bodyColor;
+}
+
+/*-----------禁用状态---------------------*/
+.disabled {
+	color: @disabledColor;
+	filter: grayscale(1);
+}
+
+/*---------hover------------------------*/
+.hoverColor {
+	&:hover {
+		color: @primary-color;
+	}
+}
+
+/*-----------简单页面--------------------*/
+.simplePage {
+	padding: @paddingL;
+	background-color: white;
+}
+
+/*-------------圆角盒子----------------*/
+.radiusBox {
+	border: 1px solid @border-color;
+	border-radius: @borderRadius;
+}
+
+.radiusBoxPadding {
+	border: 1px solid @border-color;
+	border-radius: @borderRadius;
+	padding: @padding;
+}
+
+/*-------------overflow-------------*/
+.overflowX {
+	overflow-x: auto;
+	.scrollBarStyle();
+}
+
+.overflowY {
+	overflow-y: auto;
+	.scrollBarStyle();
+}
+
+
+/*--------------公用阴影样式----------*/
+.boxShadow {
+	box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+
+/*-------单行超出隐藏------------------*/
+.fontHide {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/*
+*换行
+*/
+.nowrap {
+	white-space: nowrap;
+}
+
+/*
+ * 超出指定行隐藏
+ * @row 指定最大的行数，默认2行
+*/
+.fontHideMore(@row: 2) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: @row;
+	-webkit-box-orient: vertical;
+}
+
+/*
+ * 自定义滚动条样式,
+ * 使用时： .scrollBarStyle(); 里面的横向纵向滚动条宽度可选，默认6px大小。
+ * @width 横向滚动条的高度
+ * @height 纵向滚动条的宽度
+*/
+.scrollBarStyle(@width: 6px, @height: 6px) {
+
+	/*滚动条整体样式*/
+	&::-webkit-scrollbar {
+		width: @width;
+		height: @height;
+	}
+
+	/*滚动条里面小方块*/
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+		background: #c7c7c7;
+	}
+
+	/*滚动条的轨道*/
+	&::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+		border-radius: 10px;
+		background: white;
+	}
+}
