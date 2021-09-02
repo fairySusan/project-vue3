@@ -1,10 +1,7 @@
 <template>
   <div class="c-slide-left">
-    <router-link to="/datePicker" class="c-menu-item">
-      日期
-    </router-link>
-    <router-link to="/datePicker" class="c-menu-item">
-      单选
+    <router-link v-for="menu in menus" :to="menu.path" :key="menu.path" class="c-menu-item">
+      {{menu.name}}
     </router-link>
   </div>
 </template>
