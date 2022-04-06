@@ -13,7 +13,7 @@ import SlideLeft from '@/components/SlideLeft/SlideLeft.vue'
 export default defineComponent({
   components: {
     SlideLeft
-  }
+  },
 })
 </script>
 

@@ -15,6 +15,7 @@ export default defineComponent({
     const drops: RainDrop[] = [];
 
     onMounted(() => {
+      console.log('jdiasjdojdsi')
       const ctx:CanvasRenderingContext2D = (canvasEl.value as HTMLCanvasElement).getContext('2d') as CanvasRenderingContext2D;
       let w = (canvasEl.value as HTMLCanvasElement).width = window.innerWidth;
       let h = (canvasEl.value as HTMLCanvasElement).height = window.innerHeight;
@@ -49,6 +50,7 @@ export default defineComponent({
     });
 
     return {
+
       canvasEl
     }
   }
