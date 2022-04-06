@@ -1,3 +1,26 @@
+<script lang="ts" setup>
+import {ref} from 'vue'
+import {MenuI} from './Type'
+const menus = ref<MenuI[]>([
+  {
+    name: '日历',
+    path: '/datePicker'
+  },
+  {
+    name: '下雨动画',
+    path: '/rain'
+  },
+  {
+    name: '通知',
+    path: '/notification'
+  },
+  {
+    name: '懒加载',
+    path: '/lazyLoad'
+  }
+]);
+</script>
+
 <template>
   <div class="c-slide-left">
     <router-link v-for="menu in menus" :to="menu.path" :key="menu.path" class="c-menu-item">
@@ -5,8 +28,6 @@
     </router-link>
   </div>
 </template>
-
-<script lang="ts" src="./SlideLeft.ts"></script>
 
 <style lang="less" scoped>
 .c-slide-left {

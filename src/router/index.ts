@@ -1,7 +1,8 @@
 import {createRouter, createWebHashHistory } from 'vue-router';
-import DatePicker from '@/components/DatePicker/DatePicker.vue';
-import Rain from '@/components/RainAni/RainAni.vue';
-import Notification from '@/components/Notification/Notification.vue'
+const DatePicker = () => import('@/components/DatePicker/DatePicker.vue');
+const Rain = () => import('@/components/RainAni/RainAni.vue');
+const Notification = () => import('@/components/Notification/Notification.vue')
+const LazyLoadDemo = () => import('@/views/LazyLoadDemo.vue')
 
 const routes = [
   {
@@ -15,6 +16,10 @@ const routes = [
   {
     path: '/notification',
     component: Notification
+  },
+  {
+    path: '/lazyLoad',
+    component: LazyLoadDemo
   }
 ]
 
