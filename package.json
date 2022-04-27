@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "packPro": "vue-cli-service build",
+    "postpackPro": "node ./postCli.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

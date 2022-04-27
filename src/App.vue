@@ -1,21 +1,28 @@
+<!-- <script lang="ts" setup>
+import SlideLeft from '@/components/SlideLeft/SlideLeft.vue'
+</script> -->
+<script>
+export default {
+  data() {
+    return {
+      foo: 'i love you'
+    }
+  },
+  mounted() {
+    this.foo = 'i love china'
+    console.log('mounted')
+  }
+}
+</script>
 <template>
   <div class="top-container">
-    <SlideLeft></SlideLeft>
+    <!-- <SlideLeft></SlideLeft> -->
+    <h1>{{foo}}</h1>
     <div class="top-right-panel">
       <router-view></router-view>
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-import SlideLeft from '@/components/SlideLeft/SlideLeft.vue'
-export default defineComponent({
-  components: {
-    SlideLeft
-  },
-})
-</script>
 
 <style>
 html,body {

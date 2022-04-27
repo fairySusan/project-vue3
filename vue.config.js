@@ -1,11 +1,6 @@
 const path = require('path')
 
 const vueConfig = {
-	resolve: {
-		alias: {
-			'@/': `${path.resolve(__dirname, 'src')}/`,
-		},
-	},
 	css: {
 		loaderOptions: {
 			less: {
