@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "packPro": "vue-cli-service build",
-    "postpackPro": "node ./postCli.js",
+    "postpackPro": "node ./deploy/deploy.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
